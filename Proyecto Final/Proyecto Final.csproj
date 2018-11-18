@@ -52,9 +52,14 @@
     <Compile Include="Juegos\Sopa de letras\SopaLetras.Designer.cs">
       <DependentUpon>SopaLetras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Juegos\Timbiriche\Adyacente.cs" />
-    <Compile Include="Juegos\Timbiriche\Movimiento.cs" />
-    <Compile Include="Juegos\Timbiriche\Punto.cs">
+    <Compile Include="Juegos\Loteria\Loteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juegos\Loteria\Loteria.Designer.cs">
+      <DependentUpon>Loteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juegos\Timbiriche\Jugador.cs" />
+    <Compile Include="Juegos\Timbiriche\Linea.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Juegos\Timbiriche\Timbiriche.cs">
@@ -62,12 +67,6 @@
     </Compile>
     <Compile Include="Juegos\Timbiriche\Timbiriche.Designer.cs">
       <DependentUpon>Timbiriche.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Juegos\Loteria\Loteria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Juegos\Loteria\Loteria.Designer.cs">
-      <DependentUpon>Loteria.cs</DependentUpon>
     </Compile>
     <Compile Include="Juegos\Utils.cs" />
     <Compile Include="Main.cs">
@@ -78,11 +77,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Juegos\Timbiriche\RegistroTimbiriche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juegos\Timbiriche\RegistroTimbiriche.Designer.cs">
+      <DependentUpon>RegistroTimbiriche.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Juegos\Loteria\Loteria.resx">
       <DependentUpon>Loteria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Juegos\Sopa de letras\SopaLetras.resx">
       <DependentUpon>SopaLetras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juegos\Timbiriche\RegistroTimbiriche.resx">
+      <DependentUpon>RegistroTimbiriche.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Juegos\Timbiriche\Timbiriche.resx">
       <DependentUpon>Timbiriche.cs</DependentUpon>
@@ -113,7 +121,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Juegos\Resources\loteria.jpg" />
+    <Content Include="Juegos\Resources\sopa.png" />
+    <Content Include="Juegos\Resources\timbiriche.png" />
     <Content Include="Juegos\Resources\Timbiriche\Images\punto_negro.png" />
+    <Content Include="Juegos\Resources\Timbiriche\Tableros\4x4.txt" />
+    <Content Include="Juegos\Resources\Timbiriche\Tableros\5x5.txt" />
+    <Content Include="Juegos\Resources\Timbiriche\Tableros\6x6.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
