@@ -30,11 +30,9 @@
         {
             this.panel_jugadores = new System.Windows.Forms.Panel();
             this.panel_jugador2 = new System.Windows.Forms.Panel();
-            this.mov_j2 = new System.Windows.Forms.Label();
             this.puntos_j2 = new System.Windows.Forms.Label();
             this.jugador2 = new System.Windows.Forms.Label();
             this.panel_jugador1 = new System.Windows.Forms.Panel();
-            this.mov_j1 = new System.Windows.Forms.Label();
             this.puntos_j1 = new System.Windows.Forms.Label();
             this.jugador1 = new System.Windows.Forms.Label();
             this.gameboard = new System.Windows.Forms.TableLayoutPanel();
@@ -50,9 +48,10 @@
             this.panel_jugadores.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_jugadores.Controls.Add(this.panel_jugador2);
             this.panel_jugadores.Controls.Add(this.panel_jugador1);
-            this.panel_jugadores.Location = new System.Drawing.Point(343, 12);
+            this.panel_jugadores.Location = new System.Drawing.Point(354, 12);
+            this.panel_jugadores.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
             this.panel_jugadores.Name = "panel_jugadores";
-            this.panel_jugadores.Size = new System.Drawing.Size(104, 204);
+            this.panel_jugadores.Size = new System.Drawing.Size(88, 187);
             this.panel_jugadores.TabIndex = 0;
             // 
             // panel_jugador2
@@ -60,29 +59,19 @@
             this.panel_jugador2.AutoSize = true;
             this.panel_jugador2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_jugador2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel_jugador2.Controls.Add(this.mov_j2);
             this.panel_jugador2.Controls.Add(this.puntos_j2);
             this.panel_jugador2.Controls.Add(this.jugador2);
             this.panel_jugador2.Location = new System.Drawing.Point(3, 121);
+            this.panel_jugador2.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.panel_jugador2.Name = "panel_jugador2";
-            this.panel_jugador2.Size = new System.Drawing.Size(98, 80);
+            this.panel_jugador2.Size = new System.Drawing.Size(80, 63);
             this.panel_jugador2.TabIndex = 1;
-            // 
-            // mov_j2
-            // 
-            this.mov_j2.AutoSize = true;
-            this.mov_j2.Location = new System.Drawing.Point(14, 58);
-            this.mov_j2.Margin = new System.Windows.Forms.Padding(3, 0, 8, 5);
-            this.mov_j2.Name = "mov_j2";
-            this.mov_j2.Size = new System.Drawing.Size(72, 13);
-            this.mov_j2.TabIndex = 5;
-            this.mov_j2.Text = "Movimientos: ";
             // 
             // puntos_j2
             // 
             this.puntos_j2.AutoSize = true;
             this.puntos_j2.Location = new System.Drawing.Point(14, 36);
-            this.puntos_j2.Margin = new System.Windows.Forms.Padding(3, 0, 8, 0);
+            this.puntos_j2.Margin = new System.Windows.Forms.Padding(3, 0, 10, 10);
             this.puntos_j2.Name = "puntos_j2";
             this.puntos_j2.Size = new System.Drawing.Size(52, 13);
             this.puntos_j2.TabIndex = 4;
@@ -103,29 +92,19 @@
             this.panel_jugador1.AutoSize = true;
             this.panel_jugador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_jugador1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel_jugador1.Controls.Add(this.mov_j1);
             this.panel_jugador1.Controls.Add(this.puntos_j1);
             this.panel_jugador1.Controls.Add(this.jugador1);
             this.panel_jugador1.Location = new System.Drawing.Point(3, 15);
+            this.panel_jugador1.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.panel_jugador1.Name = "panel_jugador1";
-            this.panel_jugador1.Size = new System.Drawing.Size(98, 83);
+            this.panel_jugador1.Size = new System.Drawing.Size(80, 66);
             this.panel_jugador1.TabIndex = 0;
-            // 
-            // mov_j1
-            // 
-            this.mov_j1.AutoSize = true;
-            this.mov_j1.Location = new System.Drawing.Point(14, 61);
-            this.mov_j1.Margin = new System.Windows.Forms.Padding(3, 0, 8, 5);
-            this.mov_j1.Name = "mov_j1";
-            this.mov_j1.Size = new System.Drawing.Size(72, 13);
-            this.mov_j1.TabIndex = 2;
-            this.mov_j1.Text = "Movimientos: ";
             // 
             // puntos_j1
             // 
             this.puntos_j1.AutoSize = true;
             this.puntos_j1.Location = new System.Drawing.Point(14, 39);
-            this.puntos_j1.Margin = new System.Windows.Forms.Padding(3, 0, 8, 0);
+            this.puntos_j1.Margin = new System.Windows.Forms.Padding(3, 0, 10, 10);
             this.puntos_j1.Name = "puntos_j1";
             this.puntos_j1.Size = new System.Drawing.Size(52, 13);
             this.puntos_j1.TabIndex = 1;
@@ -184,11 +163,9 @@
 
         private System.Windows.Forms.Panel panel_jugadores;
         private System.Windows.Forms.Panel panel_jugador2;
-        private System.Windows.Forms.Label mov_j2;
         private System.Windows.Forms.Label puntos_j2;
         private System.Windows.Forms.Label jugador2;
         private System.Windows.Forms.Panel panel_jugador1;
-        private System.Windows.Forms.Label mov_j1;
         private System.Windows.Forms.Label puntos_j1;
         private System.Windows.Forms.Label jugador1;
         private System.Windows.Forms.TableLayoutPanel gameboard;

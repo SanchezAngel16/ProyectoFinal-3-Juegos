@@ -187,13 +187,21 @@ namespace Proyecto_Final.Juegos.Timbiriche
                 }
                 puntos_j2.Text = "Puntos: " + j2.getPuntos();
             }
-            //printTablero();
             Utils.printLine(((tamañoTablero-1) * (tamañoTablero-1)).ToString());
-            if(cuadrosCompletos >= (tamañoTablero-1) * (tamañoTablero-1))
+            Utils.printLine(cuadrosCompletos.ToString());
+            if(getCuadros() >= (tamañoTablero-1) * (tamañoTablero-1))
             {
-                if (j1.getPuntos() > j2.getPuntos()) Utils.printLine("Ganador: " + j1.getNombre());
-                else Utils.printLine("Ganador: " + j2.getNombre());
+                if (j1.getPuntos() > j2.getPuntos()) mostrarGanador(j1.getNombre());
+                else mostrarGanador(j2.getNombre());
+                
             }
+        }
+
+        private void mostrarGanador(String ganador)
+        {
+            Utils.printLine("Ganador");
+            DialogResult r = MessageBox.Show("Ganador: " + ganador);
+            this.Close();
         }
     }
 }
