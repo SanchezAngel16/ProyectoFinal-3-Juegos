@@ -55,8 +55,8 @@ using System.Windows.Forms;
  *     
  *     * Fecha 18 de noviembre del 2018
  *     * Descripcion: Se mejoro el diseño del tablero, y el juego ya finaliza cuando estan todos los
- *     cuadros posibles y declara ganador al jugador con mas tableros
- *     *Autor(es): Angel de Jesus Sanchez Romero
+ *     cuadros posibles y declara ganador al jugador con mas cuadros completados
+ *     * Autor(es): Angel de Jesus Sanchez Romero
  */
 
 namespace Proyecto_Final
