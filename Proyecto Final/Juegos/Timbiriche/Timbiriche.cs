@@ -36,7 +36,6 @@ namespace Proyecto_Final.Juegos.Timbiriche
                 jugador2.Text = nombre2;
                 inicializarTablero(tamañoTablero);
                 panel_jugador1.BackColor = Color.DeepSkyBlue;
-                getCuadros();
             }
         }
 
