@@ -16,11 +16,12 @@ namespace Proyecto_Final
     public partial class Loteria : Form
     {
         String ruta = Application.StartupPath + "\\..\\..\\Juegos\\Resources\\Loteria\\Cartas\\";
-        int[] cartas = new int[Utils.numCartas];
         List<int> cartasPasadas = new List<int>();
         List<Image> imgCartas = new List<Image>();
         int contadorCartas = 0;
         System.Threading.Timer timer;
+        private bool ganador;
+        private int tiempoDeEspera = 1;
 
         Jugador p1;
         Computadora computadora;
@@ -33,6 +34,7 @@ namespace Proyecto_Final
             computadora = new Computadora("Computadora", cTablero);
             p1 = new Jugador(nombre, jTablero);
             recorrerTablero();
+            ganador = false;
         }
 
         // Recorrer tablero jugador persona
@@ -53,6 +55,7 @@ namespace Proyecto_Final
                         {
                             c.Image = Image.FromFile(Application.StartupPath + "\\..\\..\\Juegos\\Resources\\Loteria\\piedra.png");
                             p1.setCartasContadas(p1.getCartasContadas() + 1);
+                            c.Enabled = false;
                         }
                     });
 
@@ -77,33 +80,20 @@ namespace Proyecto_Final
 
         private void btn_Empezar_Click(object sender, EventArgs e)
         {
+            btn_Empezar.Enabled = false;
             timer = new System.Threading.Timer(
             m =>  mostrarImagenes(),
             null,
             TimeSpan.Zero,
-            TimeSpan.FromSeconds(3));
+            TimeSpan.FromSeconds(tiempoDeEspera));
         }
 
         // Pasar cartas
         private void mostrarImagenes()
         {
-            if((contadorCartas >= Utils.numCartas) || (p1.getCartasContadas() >= 9 || computadora.getCartasContadas() >= 9))
-            {
-                if(p1.getCartasContadas() > computadora.getCartasContadas())
-                {
-                    DialogResult r = MessageBox.Show("Ganador: Persona");
-                }
-                else
-                {
-                    DialogResult r = MessageBox.Show("Ganador: Computadora");
-                }
-                timer.Dispose();
-                Utils.printLine("Acabo");
-            }
-            else
+            if(!ganador)
             {
                 int carta = 0;
-                
                 do
                 {
                     carta = Utils.generarNumeroAleatorio(0, Utils.numCartas);
@@ -112,7 +102,37 @@ namespace Proyecto_Final
                 setGriton(carta);
                 cartasPasadas.Add(carta);
                 computadora.checarTablero(carta);
+                checarGanador();
                 contadorCartas++;
+            }
+            Utils.printLine(p1.getCartasContadas().ToString());
+        }
+
+        // Checa si ya hay un ganador dependiendo de las cartas contadas de cada jugador
+        private void checarGanador()
+        {
+            int cartasJugador = p1.getCartasContadas();
+            int cartasComputadora = computadora.getCartasContadas();
+            if (cartasJugador >= 9 || cartasComputadora >= 9)
+            {
+                ganador = true;
+                timer.Dispose();
+                if(cartasJugador > cartasComputadora)
+                {
+                    DialogResult r = MessageBox.Show("Ganador: Persona");
+                    //Loteria.ActiveForm.Close();
+                }
+                else if (cartasComputadora > cartasJugador)
+                {
+                    DialogResult r = MessageBox.Show("Ganador: Computadora");
+                    //Loteria.ActiveForm.Close();
+
+                }
+                else
+                {
+                    DialogResult r = MessageBox.Show("Empate");
+                    //Loteria.ActiveForm.Close();
+                }
             }
         }
 
