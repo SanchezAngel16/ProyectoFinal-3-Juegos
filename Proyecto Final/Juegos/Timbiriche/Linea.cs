@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final.Juegos.Timbiriche
 {
-    class Linea : PictureBox
+    class Linea : UserControl
     {
         private int xIndex;
         private int yIndex;

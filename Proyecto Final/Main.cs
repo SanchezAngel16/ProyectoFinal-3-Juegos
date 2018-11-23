@@ -57,6 +57,18 @@ using System.Windows.Forms;
  *     * Descripcion: Se mejoro el diseño del tablero, y el juego ya finaliza cuando estan todos los
  *     cuadros posibles y declara ganador al jugador con mas cuadros completados
  *     * Autor(es): Angel de Jesus Sanchez Romero
+ *     
+ *     * Fecha 19 de noviembre del 2018
+ *     * Descripcion: Se añadio un timer para ir recorriendo las diferentes cartas de loteria
+ *     cada 5 segundos sin repetirse
+ *     * Autor(es): Angel de Jesus Sanchez Romero
+ *     
+ *     * Fecha 22 de noviembre del 2018
+ *     * Descripcion: Se añadieron todas las cartas del juego de loteria al proyecto,
+ *     se implementaron las matrices del tablero del jugador, se implemento un metodo para
+ *     generar un tablero aleatorio para la computadora, y checar cada carta pasada el tablero
+ *     de la computadora
+ *     * Autor(es): Angel de Jesus Sanchez Romero, Moises Alberto Reyes Peña
  */
 
 namespace Proyecto_Final
@@ -71,8 +83,8 @@ namespace Proyecto_Final
 
         private void btn_Loteria_Click(object sender, EventArgs e)
         {
-            Form loteriaForm = new Loteria();
-            loteriaForm.Show();
+            Form registroLoteriaForm = new RegistroLoteria();
+            registroLoteriaForm.Show();
         }
 
         private void btn_Timbiriche_Click(object sender, EventArgs e)

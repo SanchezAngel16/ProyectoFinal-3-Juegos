@@ -12,8 +12,9 @@ namespace Proyecto_Final.Juegos
 {
     static class Utils
     {
-
+        private static Random r = new Random();
         public static Color lineaSinConectar = Color.White;
+        public const int numCartas = 54;
 
         // Funcion para depurar 
         public static void print(String message)
@@ -34,6 +35,12 @@ namespace Proyecto_Final.Juegos
             Graphics graphics = p.CreateGraphics();
             graphics.Clear(SystemColors.Control);
             graphics.DrawLine(pen, x1, y1, x2, y2);
+        }
+
+        // Funcion parar generar un numero aleatorio entre un rango
+        public static int generarNumeroAleatorio(int valorMin, int valorMax)
+        {
+            return r.Next(valorMin, valorMax);
         }
     }
 }

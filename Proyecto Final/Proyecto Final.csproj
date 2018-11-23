@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Juegos\Loteria\Carta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Juegos\Loteria\Computadora.cs" />
+    <Compile Include="Juegos\Loteria\Jugador.cs" />
     <Compile Include="Juegos\Sopa de letras\SopaLetras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +65,7 @@
     </Compile>
     <Compile Include="Juegos\Timbiriche\Jugador.cs" />
     <Compile Include="Juegos\Timbiriche\Linea.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Juegos\Timbiriche\Timbiriche.cs">
       <SubType>Form</SubType>
@@ -82,6 +87,12 @@
     </Compile>
     <Compile Include="Juegos\Timbiriche\RegistroTimbiriche.Designer.cs">
       <DependentUpon>RegistroTimbiriche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juegos\Loteria\RegistroLoteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juegos\Loteria\RegistroLoteria.Designer.cs">
+      <DependentUpon>RegistroLoteria.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Juegos\Loteria\Loteria.resx">
       <DependentUpon>Loteria.cs</DependentUpon>
@@ -107,6 +118,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Juegos\Loteria\RegistroLoteria.resx">
+      <DependentUpon>RegistroLoteria.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,10 +135,70 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Juegos\Loteria\Tableros\tablero1.png" />
+    <Content Include="Juegos\Loteria\Tableros\tablero2.png" />
+    <Content Include="Juegos\Loteria\Tableros\tablero3.png" />
+    <Content Include="Juegos\Loteria\Tableros\tablero_1.png" />
+    <Content Include="Juegos\Resources\Loteria\cartaVolteada.jpg" />
     <Content Include="Juegos\Resources\loteria.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\30.jpg" />
+    <Content Include="Juegos\Resources\Loteria\piedra.png" />
     <Content Include="Juegos\Resources\sopa.png" />
     <Content Include="Juegos\Resources\timbiriche.png" />
     <Content Include="Juegos\Resources\Timbiriche\Images\punto_negro.png" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\0.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\1.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\10.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\11.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\12.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\13.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\14.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\15.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\16.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\17.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\18.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\19.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\2.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\20.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\21.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\22.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\23.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\24.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\25.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\26.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\27.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\28.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\29.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\3.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\31.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\32.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\33.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\34.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\35.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\36.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\37.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\38.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\39.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\4.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\40.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\41.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\42.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\43.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\44.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\45.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\46.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\47.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\48.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\49.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\5.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\50.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\51.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\52.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\53.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\6.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\7.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\8.jpg" />
+    <Content Include="Juegos\Resources\Loteria\Cartas\9.jpg" />
     <Content Include="Juegos\Resources\Timbiriche\Tableros\4x4.txt" />
     <Content Include="Juegos\Resources\Timbiriche\Tableros\5x5.txt" />
     <Content Include="Juegos\Resources\Timbiriche\Tableros\6x6.txt" />

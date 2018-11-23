@@ -22,7 +22,7 @@ namespace Proyecto_Final.Juegos.Timbiriche
         int[,] tablero;
         Jugador j1, j2;
 
-        // Constructor, obtiene nombre de los jugadores, el tamaño y el nombre del archivo
+        // Constructor, obtiene nombre de los jugadores, el tamaño del tablero y el nombre del archivo
         public Timbiriche(String nombre1, String nombre2, int tamañoTablero, String nombreTablero)
         {
             {
@@ -54,6 +54,7 @@ namespace Proyecto_Final.Juegos.Timbiriche
             string sLine = "";
             tablero = new int[tamañoArreglo, tamañoArreglo];
             setGameBoard();
+            
             for (int i = 0; i < tamañoArreglo; i++)
             {
                 sLine = objReader.ReadLine();
@@ -75,6 +76,7 @@ namespace Proyecto_Final.Juegos.Timbiriche
                             });
                             lineas.Add(l);
                             gameboard.Controls.Add(l, j, i);
+                            //gameboard.GetControlFromPosition(j, i).Size = new Size(40, 10);
                             gameboard.GetControlFromPosition(j,i).Margin = new Padding(0,4,0,0);
                         }
                         else if(tablero[i,j] == 4)
@@ -149,6 +151,7 @@ namespace Proyecto_Final.Juegos.Timbiriche
         // Registra movimientos, suma puntos a los jugadores, cambia turnos
         private void registrarMovimiento(int xIndex, int yIndex, Linea l)
         {
+            printTablero();
             cuadrosCompletos = getCuadros();
             tablero[xIndex, yIndex] = 1;
             if (j1.getTurno())
