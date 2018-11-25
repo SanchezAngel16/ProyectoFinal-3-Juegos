@@ -21,7 +21,7 @@ namespace Proyecto_Final
         int contadorCartas = 0;
         System.Threading.Timer timer;
         private bool ganador;
-        private int tiempoDeEspera = 1;
+        private int tiempoDeEspera = 3; // Tiempo en segundos
 
         Jugador p1;
         Computadora computadora;
@@ -33,6 +33,7 @@ namespace Proyecto_Final
             griton.SizeMode = PictureBoxSizeMode.StretchImage;
             computadora = new Computadora("Computadora", cTablero);
             p1 = new Jugador(nombre, jTablero);
+            lblJugador.Text = nombre;
             recorrerTablero();
             ganador = false;
         }
@@ -56,6 +57,8 @@ namespace Proyecto_Final
                             c.Image = Image.FromFile(Application.StartupPath + "\\..\\..\\Juegos\\Resources\\Loteria\\piedra.png");
                             p1.setCartasContadas(p1.getCartasContadas() + 1);
                             c.Enabled = false;
+                            checarGanador();
+                            Utils.playPointSound();
                         }
                     });
 
@@ -78,6 +81,7 @@ namespace Proyecto_Final
             }
         }
 
+        // Empieza el juego, recorriendo las cartas por el griton cada 5 segundos
         private void btn_Empezar_Click(object sender, EventArgs e)
         {
             btn_Empezar.Enabled = false;
@@ -88,17 +92,17 @@ namespace Proyecto_Final
             TimeSpan.FromSeconds(tiempoDeEspera));
         }
 
-        // Pasar cartas
+        // Pasar cartas por el griton sin repetir las cartas pasadas
         private void mostrarImagenes()
         {
-            if(!ganador)
+            if (!ganador)
             {
                 int carta = 0;
                 do
                 {
                     carta = Utils.generarNumeroAleatorio(0, Utils.numCartas);
                 } while (cartasPasadas.Contains(carta));
-                
+
                 setGriton(carta);
                 cartasPasadas.Add(carta);
                 computadora.checarTablero(carta);

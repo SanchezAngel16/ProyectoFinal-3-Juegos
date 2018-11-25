@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,19 @@ namespace Proyecto_Final.Juegos
         public static int generarNumeroAleatorio(int valorMin, int valorMax)
         {
             return r.Next(valorMin, valorMax);
+        }
+
+        // Funcion para cambiar de color un label
+        public static void changeLabelColor(Label label)
+        {
+            label.ForeColor = Color.Green;
+        }
+
+        // Funcion para reproducir sonido de punto
+        public static void playPointSound()
+        {
+            SoundPlayer simpleSound = new System.Media.SoundPlayer(Properties.Resources.score);
+            simpleSound.Play();
         }
     }
 }

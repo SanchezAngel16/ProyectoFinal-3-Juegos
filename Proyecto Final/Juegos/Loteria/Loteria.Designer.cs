@@ -33,7 +33,7 @@
             this.griton = new System.Windows.Forms.PictureBox();
             this.tableroComputadora = new System.Windows.Forms.TableLayoutPanel();
             this.tableroPersona = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblJugador = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.griton)).BeginInit();
             this.SuspendLayout();
@@ -92,14 +92,14 @@
             this.tableroPersona.Size = new System.Drawing.Size(250, 350);
             this.tableroPersona.TabIndex = 4;
             // 
-            // label1
+            // lblJugador
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Jugador";
+            this.lblJugador.AutoSize = true;
+            this.lblJugador.Location = new System.Drawing.Point(115, 28);
+            this.lblJugador.Name = "lblJugador";
+            this.lblJugador.Size = new System.Drawing.Size(45, 13);
+            this.lblJugador.TabIndex = 5;
+            this.lblJugador.Text = "Jugador";
             // 
             // label2
             // 
@@ -116,7 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 451);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblJugador);
             this.Controls.Add(this.tableroPersona);
             this.Controls.Add(this.tableroComputadora);
             this.Controls.Add(this.griton);
@@ -134,7 +134,7 @@
         private System.Windows.Forms.PictureBox griton;
         private System.Windows.Forms.TableLayoutPanel tableroComputadora;
         private System.Windows.Forms.TableLayoutPanel tableroPersona;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblJugador;
         private System.Windows.Forms.Label label2;
     }
 }

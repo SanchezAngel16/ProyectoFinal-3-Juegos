@@ -162,6 +162,7 @@ namespace Proyecto_Final.Juegos.Timbiriche
                 if (cuadrosCompletos < getCuadros())
                 {
                     j1.setPuntos(j1.getPuntos() + ((getCuadros() - cuadrosCompletos) * 10));
+                    Utils.playPointSound();
                 }
                 else
                 {
@@ -180,6 +181,7 @@ namespace Proyecto_Final.Juegos.Timbiriche
                 if (cuadrosCompletos < getCuadros())
                 {
                     j2.setPuntos(j2.getPuntos() + ((getCuadros() - cuadrosCompletos) * 10));
+                    Utils.playPointSound();
                 }
                 else
                 {

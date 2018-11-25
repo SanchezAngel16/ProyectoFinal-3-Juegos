@@ -51,6 +51,9 @@
     </Compile>
     <Compile Include="Juegos\Loteria\Computadora.cs" />
     <Compile Include="Juegos\Loteria\Jugador.cs" />
+    <Compile Include="Juegos\Sopa de letras\Letra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Juegos\Sopa de letras\SopaLetras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +120,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Juegos\Loteria\RegistroLoteria.resx">
       <DependentUpon>RegistroLoteria.cs</DependentUpon>
@@ -143,6 +147,8 @@
     <Content Include="Juegos\Resources\loteria.jpg" />
     <Content Include="Juegos\Resources\Loteria\Cartas\30.jpg" />
     <Content Include="Juegos\Resources\Loteria\piedra.png" />
+    <Content Include="Juegos\Resources\punto.wav" />
+    <Content Include="Juegos\Resources\score.wav" />
     <Content Include="Juegos\Resources\sopa.png" />
     <Content Include="Juegos\Resources\timbiriche.png" />
     <Content Include="Juegos\Resources\Timbiriche\Images\punto_negro.png" />
@@ -202,6 +208,7 @@
     <Content Include="Juegos\Resources\Timbiriche\Tableros\4x4.txt" />
     <Content Include="Juegos\Resources\Timbiriche\Tableros\5x5.txt" />
     <Content Include="Juegos\Resources\Timbiriche\Tableros\6x6.txt" />
+    <Content Include="Juegos\Sopa de letras\sopa1.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
